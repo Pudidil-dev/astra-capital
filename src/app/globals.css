@@ -11,11 +11,16 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    /* Prevent horizontal overflow without creating a new scroll container.
+       `overflow-x: clip` clips overflow without spawning a second scrollbar
+       (unlike `hidden` which would). */
+    overflow-x: clip;
   }
 
   body {
     @apply bg-canvas text-ink font-sans;
     font-feature-settings: "ss01", "cv11";
+    overflow-x: clip;
   }
 
   ::selection {

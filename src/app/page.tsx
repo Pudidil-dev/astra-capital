@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <main className="overflow-x-hidden">
+      <main>
         <HeroSection />
         <AboutSection />
         <ApproachSection />
